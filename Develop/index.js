@@ -1,10 +1,8 @@
-// TODO: Include packages needed for this application
+
 const inquirer = require('inquirer');
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
 
-// TODO: Create an array of questions for user input
-const questions = ['How do I use your project?', 'What License does your project have associated with it?', 'What contributers do you have to list?'];
 
 
 inquirer
@@ -38,6 +36,7 @@ inquirer
         type: 'input',
         message: 'What License does your project have associated with it?',
         name: 'license',
+        choices: ['MIT', 'Apache', 'GNU'],
     },
     {
         type: 'input',
